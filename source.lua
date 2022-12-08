@@ -34,7 +34,7 @@ local Active = false;
 
 --Keybinds
 local Options = {
-	
+
 };
 
 local Focused = {}
@@ -51,9 +51,9 @@ RunService.RenderStepped:Connect(function()
 	end
 
 	MoveDirection = Vector3.new(
-		if (IsKeyDown(Enum.KeyCode.A)) then -1 elseif (IsKeyDown(Enum.KeyCode.D)) then 1 else 0,
-		if (IsKeyDown(Options.Down)) then -1 elseif (IsKeyDown(Options.Up)) then 1 else 0,
-		if (IsKeyDown(Enum.KeyCode.W)) then -1 elseif (IsKeyDown(Enum.KeyCode.S)) then 1 else 0
+		(IsKeyDown(Enum.KeyCode.A)) and -1 or (IsKeyDown(Enum.KeyCode.D)) and 1 or 0,
+		(IsKeyDown(Options.Down)) and -1 or (IsKeyDown(Options.Up)) and 1 or 0,
+		(IsKeyDown(Enum.KeyCode.W)) and -1 or (IsKeyDown(Enum.KeyCode.S)) and 1 or 0
 	);
 
 	TeleportationPart.Parent = workspace;
